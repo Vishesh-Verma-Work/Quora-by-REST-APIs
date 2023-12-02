@@ -36,11 +36,15 @@ app.get("/posts", (req,res) => {
 
 
 app.get("/posts/new", (req,res) => {
-    res.render("new.ejs" , );
+    res.render("new.ejs");
 })
+
+// /posts/new kon req gyi to form khul gya, uske baad data add hua
 
 app.post("/posts", (req,res) => {
     let {username , content} = req.body;
     posts.push({username,content})
-    res.send(`post content is : ${req.body.username}`);
+    res.redirect("/posts");
 })
+
+// fir yaha aae, yaha data add hua, ab chahate h sare post main wale pe show ho to use krenge res.redirect(url), upr use kiya hai

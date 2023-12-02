@@ -11,11 +11,11 @@ h1{
 
 .post {
     border: .00001px solid rgba(0, 0, 0, 0.444);
-    box-shadow: 0 0 6rem rgba(165, 42, 42, 0.268);
+    /* box-shadow: 0 0 6rem rgba(165, 42, 42, 0.268); */
     padding: 2rem;
     border-radius: 1rem;
     margin: 1rem 0rem;
-    width: 35%;
+    width: 60%;
     background-color: blanchedalmond;
 }
 
