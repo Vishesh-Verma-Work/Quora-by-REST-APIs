@@ -6,8 +6,11 @@
     <title>Create New Posts</title>
     <link rel="stylesheet" href="/style.css">
     <style>
-     
+        body {
+            background-color: rgba(165, 42, 42, 0.332);
+        }
         .box {
+            background-color: aliceblue;
             border-radius: 1rem;
             box-shadow: 0 0 5rem rgba(0, 0, 0, 0.475);
             padding: 6rem 4rem;
@@ -24,6 +27,7 @@
         }
 
         button {
+            cursor: pointer;
             margin-top: 2rem;
             height: 2rem;
             margin-left: 15rem;
@@ -33,6 +37,7 @@
 </head>
 <body>
     <div class="box">
+        <h3>Enter the Data</h3>
     <form action="/posts" method="post">
         <input type="text" placeholder="enter username" name="username" id="username"> <br> <br>
 
