@@ -7,11 +7,12 @@
 </head>
 <body>
     <h2>Edit Your Post</h2>
-    <p>Post ID : <%= post.id %></p>
+    <p>Post ID : @<%= post.id %></p>
     <p>User Name : <%= post.username %></p>
-    <form action="">
-        <textarea name="" id="" cols="30" rows="10"><%= post.content %></textarea>
-        <button><a href="http://localhost:8080/posts">Submit</a></button>
+    <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
+        <textarea name="content" id="" cols="30" rows="10"><%= post.content %></textarea>
+        <!-- <button><a href="http://localhost:8080/posts">Submit</a></button> -->
+        <button>sub</button>
     </form>
 </body>
 </html>

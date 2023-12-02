@@ -1,10 +1,11 @@
 const express = require("express");
 const app = express();
 const path = require("path");
+const methodOverride = require('method-override')
 
 const { v4: uuidv4 } = require('uuid');
 
-
+app.use(methodOverride('_method'))
 app.use(express.urlencoded ({extended : true}));
 app.set("view engine", "ejs");
 app.set("views", path.join(__dirname, "views"));
@@ -67,7 +68,7 @@ app.patch("/posts/:id", (req,res) =>{
     let newContent = req.body.content;
     let post = posts.find((xyz) => id === xyz.id);
     post.content = newContent;
-    
+    res.redirect("/posts");
 })
 
 app.get("/posts/:id/edit", (req,res) =>{
