@@ -1,4 +1,10 @@
+* {
+    text-decoration: none;
+    list-style: none;
+}
+
 body {
+    background-color:#eeeeee;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -6,12 +12,12 @@ body {
 }
 h1{
     font-size: 3rem;
-    color: brown;
+    color: #aa2200;
 }
 
 .post {
     border: .00001px solid rgba(0, 0, 0, 0.444);
-    /* box-shadow: 0 0 6rem rgba(165, 42, 42, 0.268); */
+    box-shadow: 0 0 1.5rem 	#aa2200ae;
     padding: 2rem;
     border-radius: 1rem;
     margin: 1rem 0rem;
@@ -24,3 +30,12 @@ h1{
     font-style: italic;
 }
 
+button {
+    box-shadow: 0 0 .1rem 	#aa220079;
+    color: 	#333333;
+}
+
+a {
+    
+    color: 	#333333;
+}
