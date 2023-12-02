@@ -77,3 +77,13 @@ app.get("/posts/:id/edit", (req,res) =>{
     res.render("edit.ejs", {post}); 
 })
 
+
+
+
+// dlt req
+
+app.delete("/posts/:id", (req,res) =>{
+    let {id} = req.params;
+    posts = posts.filter((xyz) => id !== xyz.id);
+    res.redirect("/posts");
+})
