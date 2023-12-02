@@ -11,11 +11,17 @@ body {
     align-items: center;
 }
 h1{
+    box-shadow: 0 0 1rem brown;
+    padding: .6rem 0;
+    text-align: center;
+    width: 100%;
+    background-color: rgba(255, 235, 205, 0.416);
     font-size: 3rem;
     color: #aa2200;
 }
 
 .post {
+    display: flex;
     border: .00001px solid rgba(0, 0, 0, 0.444);
     box-shadow: 0 0 1.5rem 	#aa2200ae;
     padding: 2rem;
@@ -23,6 +29,12 @@ h1{
     margin: 1rem 0rem;
     width: 60%;
     background-color: blanchedalmond;
+    justify-content: space-between;
+}
+
+.opt {
+    display: flex;
+    align-items: center;
 }
 
 
@@ -31,11 +43,31 @@ h1{
 }
 
 button {
+    transition: 400ms;
+    padding: .2rem 1rem;
+    background-color: rgba(165, 42, 42, 0.841);
+    border-radius: .2rem;
+    margin: .19rem 0;
     box-shadow: 0 0 .1rem 	#aa220079;
-    color: 	#333333;
+    color: 	#fff;
 }
 
-a {
-    
-    color: 	#333333;
+button:hover{
+    color: brown;
+    background-color: #fff;
+}
+
+a:hover {
+    background-color: #fff;
+    color: brown;
+}
+
+a { 
+    transition: 400ms;
+    color: 	#fff;
+}
+
+.options {
+    display: flex;
+    flex-direction: column;
 }

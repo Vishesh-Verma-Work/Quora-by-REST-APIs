@@ -11,7 +11,7 @@
     <p>Post ID : @<%= post.id %></p>
     <p>User Name : <%= post.username %></p>
     <form method="post" action="/posts/<%= post.id %>?_method=PATCH">
-        <textarea name="content" id="" cols="30" rows="10"><%= post.content %></textarea>
+        <textarea name="content" id="" cols="50" rows="5"><%= post.content %></textarea>
         <!-- <button><a href="http://localhost:8080/posts">Submit</a></button> -->
         <button>sub</button>
         <button><a href="http://localhost:8080/posts">Cancle</a></button>
