@@ -17,14 +17,17 @@ app.listen(port, ()=> {
 
 let posts =[
     {
+        id : "1a",
         username : "Vishesh",
         content : "I love web dev",
-    },
+    },  
     {
+        id : "2b",
         username : "Gargi",
         content : "I love sleeping",
     },
     {
+        id : "3c",
         username : "aman",
         content : "I love outdoor games",
     }
@@ -46,5 +49,11 @@ app.post("/posts", (req,res) => {
     posts.push({username,content})
     res.redirect("/posts");
 })
-
+ 
 // fir yaha aae, yaha data add hua, ab chahate h sare post main wale pe show ho to use krenge res.redirect(url), upr use kiya hai
+
+app.get("/posts/:id", (req, res) => {
+    let {id} = req.params;
+    let post = posts.find((xyz) => id === xyz.id);
+    res.render("show.ejs" , {post});
+});
